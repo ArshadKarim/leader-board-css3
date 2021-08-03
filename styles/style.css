@@ -50,7 +50,10 @@ hr{
     border: 1px solid #D1D1D1;
     margin-bottom: 30px;
 }
-/* top blogs styles */
+/* -------------
+top blogs styles 
+----------------*/
+
 .blogs{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -81,9 +84,8 @@ hr{
 
 /* course styles */
 .courses{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .course .course-banner img{
     width: 224px;
@@ -120,12 +122,16 @@ hr{
     .players, .blogs, .courses{
         grid-template-columns: repeat(1, 1fr);
     }
-    .player, .blog{
+    .player, .blog, .course{
         flex-direction: column;
     }
-    .course{
-        flex-direction: column;
-        align-items: center;
-
+}
+/* Tab Devices */
+@media only screen and (min-width:688px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
